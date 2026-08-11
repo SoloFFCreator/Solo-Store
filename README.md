@@ -1,22 +1,12 @@
-# SoloMarket
+# SoloMarket — Tailwind rebuild
 
-Push this folder to GitHub and connect it to Vercel.
+- No `css/` directory.
+- No external custom CSS file.
+- Every HTML page loads Tailwind through the Tailwind Play CDN.
+- Small global animation/glass rules are embedded directly in each HTML `<style>` block.
+- Responsive mobile-first UI.
+- Seller product creation generates a non-null unique `slug` before inserting into `products`.
+- The Supabase browser client uses only the publishable key.
 
-Supabase URL/key are configured in `js/config.js`. The publishable key is intended for browser use; never add a service-role key.
-
-Required Supabase migrations/storage from the project setup:
-- seller_payment_methods
-- payment_submissions
-- download_entitlements
-- product_files
-- publish_product()
-- get_download_path()
-- approve_payment_submission()
-- reject_payment_submission()
-
-Private Storage buckets:
-- digital-products
-- payment-proofs
-- seller-payment-qr
-
-Test with separate buyer/seller accounts before public launch.
+For production, compile Tailwind locally instead of relying on the Play CDN.
+Never expose a Supabase service-role/secret key in frontend code.
