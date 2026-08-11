@@ -1,0 +1,1 @@
+window.SoloApp={escape(v){let d=document.createElement('div');d.textContent=v??'';return d.innerHTML},money(v,c='NPR'){return c+' '+Number(v||0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}};
