@@ -1,0 +1,1 @@
+import Header from"./Header";import{Outlet}from"react-router-dom";export default function Layout(){return <><Header/><Outlet/><footer className="border-t border-white/10 px-4 py-10 text-xs text-zinc-600"><div className="mx-auto flex w-[min(1180px,100%)] justify-between gap-3"><span>© 2026 SoloMarket</span><span>Digital products. Built for creators.</span></div></footer></>}

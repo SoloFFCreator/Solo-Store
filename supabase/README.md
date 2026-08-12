@@ -1,0 +1,1 @@
+The existing active SoloMarket Supabase project already has the marketplace tables, RLS and private-storage migrations. This React app is aligned to those tables. Verify the private buckets and RLS before production launch.

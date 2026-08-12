@@ -1,0 +1,2 @@
+import{motion}from"motion/react";import{Link}from"react-router-dom";
+export default function Logo(){return <Link to="/" className="flex items-center gap-2.5 font-black tracking-tight"><motion.span whileHover={{rotate:-8,scale:1.06}} className="grid size-9 place-items-center rounded-xl bg-gradient-to-br from-violet-300 via-violet-500 to-indigo-600 text-sm shadow-[0_10px_35px_rgba(129,92,246,.35)]">S</motion.span><span className="text-lg">Solo<span className="text-violet-300">Market</span></span></Link>}

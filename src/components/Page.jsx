@@ -1,0 +1,2 @@
+import{motion}from"motion/react";export default function Page({children,className=""}){return <motion.main initial={{opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:.4}} className={className}>{children}</motion.main>}
+export function Reveal({children}){return <motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true,amount:.15}} transition={{duration:.55}}>{children}</motion.div>}
