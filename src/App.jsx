@@ -14,6 +14,7 @@ import SellerSettings from "./pages/SellerSettings";
 import Purchases from "./pages/Purchases";
 import NotFound from "./pages/NotFound";
 import Admin from "./pages/Admin";
+import Profile, { AuthHandle } from "./pages/Profile";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
             <Route element={<ProtectedRoute />}>
               <Route path="/checkout/:id" element={<Checkout />} />
               <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/profile" element={<Profile />} />
               <Route path="/dashboard/products" element={<SellerProducts />} />
               <Route path="/dashboard/orders" element={<SellerPayments />} />
               <Route path="/dashboard/settings" element={<SellerSettings />} />
@@ -38,6 +40,7 @@ export default function App() {
           </Route>
           <Route path="/login" element={<Auth />} />
           <Route path="/register" element={<Auth register />} />
+          <Route path="/auth/handle" element={<AuthHandle />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
