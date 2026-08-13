@@ -13,8 +13,8 @@ import SellerPayments from "./pages/SellerPayments";
 import SellerSettings from "./pages/SellerSettings";
 import Purchases from "./pages/Purchases";
 import NotFound from "./pages/NotFound";
-import Admin from "./pages/Admin";
-import AdminLogin from "./pages/AdminLogin";
+import Admin from "./admin/Admin";
+import AdminLogin from "./admin/AdminLogin";
 import Profile, { AuthHandle } from "./pages/Profile";
 
 export default function App() {

@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import Page from "../components/Page";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "../context/AuthContext";
 
 export default function AdminLogin() {
   const { user, profile, loading } = useAuth();
-  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -17,7 +16,7 @@ export default function AdminLogin() {
     setBusy(true); setMessage("");
     const { error } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
     if (error) setMessage("Unable to sign in with those credentials.");
-    else navigate("/admin", { replace: true });
+    else setMessage("Checking admin permissions…");
     setBusy(false);
   }
   return <Page className="mx-auto flex min-h-[calc(100vh-160px)] w-[min(520px,calc(100%-28px))] items-center py-12">
