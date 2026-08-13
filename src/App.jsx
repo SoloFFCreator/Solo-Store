@@ -43,6 +43,7 @@ export default function App() {
           <Route path="/register" element={<Auth register />} />
           <Route path="/auth/handle" element={<AuthHandle />} />
           <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/src/admin/login" element={<AdminLogin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
