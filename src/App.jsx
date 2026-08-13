@@ -14,6 +14,7 @@ import SellerSettings from "./pages/SellerSettings";
 import Purchases from "./pages/Purchases";
 import NotFound from "./pages/NotFound";
 import Admin from "./pages/Admin";
+import AdminLogin from "./pages/AdminLogin";
 import Profile, { AuthHandle } from "./pages/Profile";
 
 export default function App() {
@@ -41,6 +42,7 @@ export default function App() {
           <Route path="/login" element={<Auth />} />
           <Route path="/register" element={<Auth register />} />
           <Route path="/auth/handle" element={<AuthHandle />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
